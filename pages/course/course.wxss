@@ -1,0 +1,33 @@
+/* pages/course/course.wxss */
+.coverImg{
+  height: 350rpx;
+  width: 750rpx;
+}
+.textstyle-main{
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.bottom-nav{
+  position:fixed;
+  display: flex;
+   bottom:0;
+   width: 750rpx;
+   height: 75rpx;
+   background-color: white;
+}
+.bottom-image{
+  padding: 10rpx;
+  margin-left: 50rpx;
+  align-self: center;
+  width: 40rpx;
+   height: 40rpx;
+}
+.bottom-navigator{
+ display: flex;
+}
+.bottom-view{
+  margin-left: 50rpx;
+  background-color: black;
+  height: 75rpx;
+  width: 1rpx;
+}

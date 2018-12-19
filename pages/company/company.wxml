@@ -1,0 +1,38 @@
+<!--pages/company/company.wxml-->
+<view>
+<cover-image class='coverImg' src='{{companyDetail.org.coverImgUrl}}'>
+</cover-image>
+</view>
+<text class='orgtitle'>
+{{companyDetail.org.name}}
+</text>
+<text class="introduction {{isFolded?'hide':'show'}}">
+{{companyDetail.org.introduction}}
+</text>
+<!--切换 -->
+<view bindtap="changeText" class="state">{{isFolded?'展开':'收起'}}</view> 
+<text class='addrtext'>
+机构地址:{{companyDetail.org.addr}}
+</text>
+<!--全部课程-->
+  <view class='company-text'>
+<text class='text-body-free'>
+  全部课程
+</text>
+<navigator class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=学霸速成&typeId=1'>
+<text space='nbsp' class='textstyle2'>
+更多
+</text>
+<image class='right_small_icon'src='/upload/next.png'></image>
+</navigator>
+</view>
+<view >
+    <block class='studygod-view'wx:for="{{courseArr}}" wx:key=''>
+    <navigator  hover-class='none' url='/pages/course/course?title={{item.title}}&courseid={{item.id}}'>
+    	<view>
+    	<image class='studygod_image'src="{{item.coverImg}}" data-index="{{i}}" ></image>
+      <text class='studygod_text'>{{item.title}}</text>
+    	</view>
+      </navigator>
+    </block>
+    </view>

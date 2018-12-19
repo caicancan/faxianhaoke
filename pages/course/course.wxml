@@ -1,0 +1,80 @@
+<!--pages/course/course.wxml-->
+<view>
+<cover-image class='coverImg'src='{{courseDetail.coverImg}}'>
+</cover-image>
+</view>
+<view>
+<text >
+机构地址:{{courseDetail.addr}}
+</text>
+</view>
+<!--课程简介-->
+<view>
+<text class='textstyle-main'>
+课程简介
+</text>
+<text >
+{{courseDetail.introduction}}
+</text>
+</view>
+<!--课程收获-->
+<view>
+<text class='textstyle-main'>
+课程收获
+</text>
+<text >
+{{courseDetail.reward}}
+</text>
+</view>
+<!--教师简介-->
+<view>
+<text class='textstyle-main'>
+教师简介
+</text>
+<text >
+{{courseDetail.tExperience}}
+</text>
+</view>
+<!--课程大纲-->
+<view>
+<text class='textstyle-main'>
+课程大纲（点击查看全部）
+</text>
+<text >
+暂无
+</text>
+</view>
+<!--适合对象-->
+<view>
+<text class='textstyle-main'>
+适合对象
+</text>
+<text >
+{{courseDetail.suitableObject}}
+</text>
+</view>
+<!--学员评价-->
+<view>
+<text class='textstyle-main'>
+学员评价
+</text>
+<text >
+暂无
+</text>
+</view>
+<!--底部的导航栏-->
+<view class='bottom-nav'>
+<navigator  class='bottom-navigator' hover-class='none' url='/pages/company/company?orgid={{courseDetail.orgId}}'>
+<image  class='bottom-image'src='../../images/detailcompany.png'></image>
+<text >
+机构
+</text>
+</navigator>
+<view class='bottom-view'></view>
+<view class='bottom-navigator' bindtap='callPhone'>
+<image  class='bottom-image'src='../../images/phone.png' ></image>
+<text >
+电话
+</text>
+</view>
+</view>

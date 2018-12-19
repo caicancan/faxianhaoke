@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#0CA6F0",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "机构详情",
+  "backgroundColor": "#f40",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}

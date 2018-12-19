@@ -1,0 +1,182 @@
+<!--pages/home/home.wxml-->
+<view class='searchbar'>
+<view class='searchbar-in'>
+<image class='icon-search'src='/images/icon_search@2x.png'></image>
+<text>搜索</text>
+</view>
+</view>
+<!--首页轮播图-->
+<!-- <view data-num='{{num+2}}'>这是一段文字{{msg}}</view> -->
+<swiper class='index-swiper' indicator-dots='{{true}}' indicator-active-color='white' autoplay='true'
+interval='2500' circular='true'>
+<!-- previous-margin='15rpx'
+next-margin='15rpx'> -->
+<block wx:for="{{swiperArr}}" wx:for-index="i" wx:for-item="item" wx:key="banner">
+<swiper-item >
+<image src="{{item.coverImg}}" data-index="{{i}}" ></image>
+</swiper-item>
+</block>
+</swiper>
+<!-- 首页楼层 -->
+<view class='floor'>
+  <!-- 首页标题 -->
+  <view class='floor-head' bindtap='testHandle' wx:if="{{false}}">
+    <navigator url='/pages/home/home' catchtap='sonHandle' class='floor-head-link' data-para='函数参数'>
+      <image class='floor-head-img' src='/upload/pic_floor01_title@2x.png'></image>
+    </navigator>
+  </view>
+  <!-- 楼层主体  -->
+  <view class='floor-body'>
+    <!-- 主体左侧大图  -->
+    <view class='floor-body-left'>
+      <navigator class='floor-body-img-link' url='/pages/courselist/courselist?title=兴趣爱好&typeId=2'>
+        <image class='floor-body-left-img' src='/upload/tvhobbies.png'></image>
+      </navigator>
+    </view>
+    <!-- 主体右侧小图  -->
+    <view class='floor-body-right'>
+      <navigator class='floor-body-img-link' url='/pages/courselist/courselist?title=免费专栏&typeId=2'>
+        <image class='floor-body-right-img-column' src='/upload/tvcolumn.png'></image>
+      </navigator>
+      <navigator class='floor-body-img-link' url='/pages/courselist/courselist?title=学霸速成&typeId=1'>
+        <image class='floor-body-right-img' src='/upload/tvstudygod.png'></image>
+      </navigator>
+      <navigator class='floor-body-img-link' url='/pages/courselist/courselist?title=技能提升&typeId=3'>
+        <image  class='floor-body-right-img' src='/upload/tvskillpromote.png'></image>
+      </navigator>
+      <navigator class='floor-body-img-link' url='/pages/courselist/courselist?title=早教中心&typeId=4'>
+        <image class='floor-body-right-img' src='/upload/tvteachchild.png'></image>
+      </navigator>
+      <navigator class='floor-body-img-link' url='/pages/courselist/courselist?title=分类&typeId=2'>
+        <image class='floor-body-right-img' src='/upload/tvclassfication.png'></image>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class='text-body'>
+<text class='textstyle' space='nbsp'>
+  推荐
+</text>
+<text class='textstyle2' space='nbsp'>
+换一换
+</text>
+<image class='right_small_icon'src='/upload/next.png'></image>
+</view>
+<!--推荐-->
+<view class='block-view'>
+    <block class='tuijian'wx:for="{{tuijianArr}}" wx:key=''>
+    	<view class="tuijian_cell">
+    	<image class='tuijian_image'src="{{item.coverImg}}" data-index="{{i}}" ></image>
+      <text class='tuijian_text'>{{item.title}}</text>
+    	</view>
+    </block>
+    </view>
+  <!--免费专栏-->
+  <view class='text'>
+<text class='text-body-free'>
+  免费专栏
+</text>
+<navigator class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=免费专栏&typeId=2' >
+<text space='nbsp' class='textstyle2'>
+更多
+</text>
+<image class='right_small_icon'src='/upload/next.png'></image>
+</navigator>
+</view>
+	<view class="freeContent_cell" >
+  <text class='freeContent_text'>{{freeContent.title}}</text>
+    	<image class='freeContent' src='{{freeContent.coverImg}}' height='180rpx' width='180rpx'></image>
+  </view>
+ <!--学霸速成-->
+  <view class='text'>
+<text class='text-body-free'>
+  学霸速成
+</text>
+<navigator class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=学霸速成&typeId=1'>
+<text space='nbsp' class='textstyle2'>
+更多
+</text>
+<image class='right_small_icon'src='/upload/next.png'></image>
+</navigator>
+</view>
+<view >
+    <block class='studygod-view'wx:for="{{studygodArr}}" wx:key=''>
+    <navigator  hover-class='none' url='/pages/course/course?title={{item.title}}&courseid={{item.id}}'>
+    	<view>
+    	<image class='studygod_image'src="{{item.coverImg}}" data-index="{{i}}" ></image>
+      <text class='studygod_text'>{{item.title}}</text>
+    	</view>
+      </navigator>
+    </block>
+    </view>
+    <!--兴趣爱好-->
+  <view class='text'>
+<text class='text-body-free'>
+  兴趣爱好
+</text>
+<navigator class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=兴趣爱好&typeId=2'>
+<text space='nbsp' class='textstyle2'>
+更多
+</text>
+<image class='right_small_icon'src='/upload/next.png'></image>
+</navigator>
+</view>
+<view class='block-view'>
+    <block class='tuijian'wx:for="{{hobbiesArr}}" wx:key=''>
+    <navigator  hover-class='none' url='/pages/course/course?title={{item.title}}&courseid={{item.id}}'>
+    	<view class="tuijian_cell">
+    	<image class='tuijian_image'src="{{item.coverImg}}" data-index="{{i}}" ></image>
+      <text class='tuijian_text'>{{item.title}}</text>
+    	</view>
+      </navigator>
+    </block>
+    </view>
+   
+     <!--技能提升-->
+  <view class='text'>
+<text class='text-body-free'>
+  技能提升
+</text>
+<navigator  class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=技能提升&typeId=3'>
+<text space='nbsp' class='textstyle2'>
+更多
+</text>
+<image class='right_small_icon'src='/upload/next.png'></image>
+</navigator>
+</view>
+<view >
+    <block class='studygod-view'wx:for="{{skillpromoteArr}}"wx:key=''>
+    <navigator  hover-class='none' url='/pages/course/course?title={{item.title}}&courseid={{item.id}}'>
+    	<view>
+    	<image class='studygod_image'src="{{item.coverImg}}" data-index="{{i}}" ></image>
+      <text class='studygod_text'>{{item.title}}</text>
+    	</view>
+      </navigator>
+    </block>
+    </view>
+     <!--早教中心-->
+  <view class='text'>
+<text class='text-body-free'>
+  早教中心
+</text>
+<navigator  class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=早教中心&typeId=4'>
+<text space='nbsp' class='textstyle2'>
+更多
+</text>
+<image class='right_small_icon'src='/upload/next.png'></image>
+</navigator>
+</view>
+<view >
+    <block class='studygod-view'wx:for="{{childrenTeachArr}}" wx:key=''>
+    <navigator  hover-class='none' url='/pages/course/course?title={{item.title}}&courseid={{item.id}}'>
+    	<view>
+    	<image class='studygod_image'src="{{item.coverImg}}" data-index="{{i}}" ></image>
+      <text class='studygod_text'>{{item.title}}</text>
+    	</view>
+      </navigator>
+    </block>
+    </view>
+    
+
+
+  

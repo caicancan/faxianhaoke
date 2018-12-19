@@ -1,0 +1,22 @@
+/* pages/courselist/courselist.wxss */
+.studygod-view{
+  margin-top: 100rpx;
+  padding: 10rpx;
+}
+.studygod_image{
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  width: 220rpx;
+  height: 175rpx;
+  flex: 1;
+  text-align: center
+}
+.studygod_text{
+  display: inline-block;
+  margin-left: 20rpx;
+  width: 500rpx;
+  max-lines: 1;
+   overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}

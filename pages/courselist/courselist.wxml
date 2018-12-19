@@ -1,0 +1,11 @@
+<!--pages/courselist/courselist.wxml-->
+<view class='block-view'>
+    <block class='study-god'wx:for="{{courseArr}}">
+      <navigator  hover-class='none' url='/pages/course/course?title={{item.title}}&courseid={{item.id}}'>
+    	<view class="studygod_cell">
+    	<image class='studygod_image'src="{{item.coverImg}}" data-index="{{i}}" ></image>
+      <text class='studygod_text'>{{item.title}}</text>
+    	</view>
+      </navigator>
+    </block>
+    </view>
