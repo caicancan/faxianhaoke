@@ -13,18 +13,12 @@ interval='2500' circular='true'>
 next-margin='15rpx'> -->
 <block wx:for="{{swiperArr}}" wx:for-index="i" wx:for-item="item" wx:key="banner">
 <swiper-item >
-<image src="{{item.coverImg}}" data-index="{{i}}" ></image>
+<image class='index-swiper-img' src="{{item.coverImg}}" data-index="{{i}}" ></image>
 </swiper-item>
 </block>
 </swiper>
 <!-- 首页楼层 -->
 <view class='floor'>
-  <!-- 首页标题 -->
-  <view class='floor-head' bindtap='testHandle' wx:if="{{false}}">
-    <navigator url='/pages/home/home' catchtap='sonHandle' class='floor-head-link' data-para='函数参数'>
-      <image class='floor-head-img' src='/upload/pic_floor01_title@2x.png'></image>
-    </navigator>
-  </view>
   <!-- 楼层主体  -->
   <view class='floor-body'>
     <!-- 主体左侧大图  -->
@@ -53,14 +47,16 @@ next-margin='15rpx'> -->
     </view>
   </view>
 </view>
-<view class='text-body'>
-<text class='textstyle' space='nbsp'>
+<view class='text-body' wx:if="{{tuijianArr}}">
+<text class='textstyle'>
   推荐
 </text>
-<text class='textstyle2' space='nbsp'>
+<view class='navigator-view'>
+<text class='textstyle2'>
 换一换
 </text>
 <image class='right_small_icon'src='/upload/next.png'></image>
+</view>
 </view>
 <!--推荐-->
 <view class='block-view'>
@@ -72,12 +68,12 @@ next-margin='15rpx'> -->
     </block>
     </view>
   <!--免费专栏-->
-  <view class='text'>
-<text class='text-body-free'>
+  <view class='text-body'>
+<text class='textstyle'>
   免费专栏
 </text>
 <navigator class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=免费专栏&typeId=2' >
-<text space='nbsp' class='textstyle2'>
+<text  class='textstyle2'>
 更多
 </text>
 <image class='right_small_icon'src='/upload/next.png'></image>
@@ -85,15 +81,15 @@ next-margin='15rpx'> -->
 </view>
 	<view class="freeContent_cell" >
   <text class='freeContent_text'>{{freeContent.title}}</text>
-    	<image class='freeContent' src='{{freeContent.coverImg}}' height='180rpx' width='180rpx'></image>
+    	<image class='freeContent_img' src='{{freeContent.coverImg}}'></image>
   </view>
  <!--学霸速成-->
-  <view class='text'>
-<text class='text-body-free'>
+  <view class='text-body'>
+<text class='textstyle'>
   学霸速成
 </text>
 <navigator class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=学霸速成&typeId=1'>
-<text space='nbsp' class='textstyle2'>
+<text class='textstyle2'>
 更多
 </text>
 <image class='right_small_icon'src='/upload/next.png'></image>
@@ -110,8 +106,8 @@ next-margin='15rpx'> -->
     </block>
     </view>
     <!--兴趣爱好-->
-  <view class='text'>
-<text class='text-body-free'>
+  <view class='text-body'>
+<text class='textstyle'>
   兴趣爱好
 </text>
 <navigator class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=兴趣爱好&typeId=2'>
@@ -133,8 +129,8 @@ next-margin='15rpx'> -->
     </view>
    
      <!--技能提升-->
-  <view class='text'>
-<text class='text-body-free'>
+  <view class='text-body'>
+<text class='textstyle'>
   技能提升
 </text>
 <navigator  class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=技能提升&typeId=3'>
@@ -155,8 +151,8 @@ next-margin='15rpx'> -->
     </block>
     </view>
      <!--早教中心-->
-  <view class='text'>
-<text class='text-body-free'>
+  <view class='text-body'>
+<text class='textstyle'>
   早教中心
 </text>
 <navigator  class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=早教中心&typeId=4'>

@@ -1,8 +1,10 @@
 <!--pages/course/course.wxml-->
+<view class='course_view' overflow='hidden'>
 <view>
 <cover-image class='coverImg'src='{{courseDetail.coverImg}}'>
 </cover-image>
 </view>
+<view class='textstyle-block'>
 <view>
 <text >
 机构地址:{{courseDetail.addr}}
@@ -16,6 +18,7 @@
 <text >
 {{courseDetail.introduction}}
 </text>
+
 </view>
 <!--课程收获-->
 <view>
@@ -58,9 +61,10 @@
 <text class='textstyle-main'>
 学员评价
 </text>
-<text >
+<text class='without' >
 暂无
 </text>
+</view>
 </view>
 <!--底部的导航栏-->
 <view class='bottom-nav'>
@@ -76,5 +80,6 @@
 <text >
 电话
 </text>
+</view>
 </view>
 </view>

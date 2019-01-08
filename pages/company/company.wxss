@@ -61,9 +61,34 @@
     white-space: nowrap;
     text-overflow:ellipsis;
 }
+.textstyle{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.textstyle2{
+  font-size: 30rpx;
+  margin-top: 15rpx;
+  margin-right: 20rpx;
+}
 .right_small_icon{
- width: 25rpx;
-  height: 25rpx;
-  margin-left: 10rpx;
-  margin-top: 55rpx; 
+margin-top: 40rpx;
+  align-self: center;
+  margin-right: 40rpx;
+  width: 16rpx;
+  height: 26rpx;
+}
+.text-body{
+  display: flex;
+  flex-direction: row;
+   justify-content: space-between;
+  text-align: center;
+  width: 750rpx;
+}
+.navigator-view{
+  display: flex;
+  flex-direction: row;
+}
+.textstyle-block{
+  margin-left: 30rpx;
+  margin-bottom: 100rpx;
 }

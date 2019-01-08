@@ -5,5 +5,5 @@ App({
   globalData: {
     userInfo: null
   },
-  globalurl: "http://127.0.0.1"
+  globalurl: "https://test.fxhkapp.com:8082"
 })

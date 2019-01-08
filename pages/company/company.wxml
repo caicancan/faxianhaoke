@@ -1,8 +1,10 @@
 <!--pages/company/company.wxml-->
+<view class='company_view'>
 <view>
 <cover-image class='coverImg' src='{{companyDetail.org.coverImgUrl}}'>
 </cover-image>
 </view>
+<view class='textstyle-block'>
 <text class='orgtitle'>
 {{companyDetail.org.name}}
 </text>
@@ -15,12 +17,12 @@
 机构地址:{{companyDetail.org.addr}}
 </text>
 <!--全部课程-->
-  <view class='company-text'>
-<text class='text-body-free'>
+  <view class='text-body'>
+<text class='textstyle'>
   全部课程
 </text>
 <navigator class='navigator-view' hover-class='none' url='/pages/courselist/courselist?title=学霸速成&typeId=1'>
-<text space='nbsp' class='textstyle2'>
+<text  class='textstyle2'>
 更多
 </text>
 <image class='right_small_icon'src='/upload/next.png'></image>
@@ -35,4 +37,6 @@
     	</view>
       </navigator>
     </block>
+    </view>
+  </view>
     </view>

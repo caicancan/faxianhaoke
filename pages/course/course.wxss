@@ -1,11 +1,22 @@
 /* pages/course/course.wxss */
+.course_view{
+  display: flex;
+  flex-direction: column;
+}
 .coverImg{
   height: 350rpx;
   width: 750rpx;
 }
 .textstyle-main{
+  width: 200rpx;
+  height: 50rpx;
+  max-lines: 1;
   font-weight: bold;
   font-size: 30rpx;
+}
+.textstyle-block{
+  margin-left: 30rpx;
+  margin-bottom: 100rpx;
 }
 .bottom-nav{
   position:fixed;
@@ -24,10 +35,14 @@
 }
 .bottom-navigator{
  display: flex;
+ flex-direction: row;
 }
 .bottom-view{
   margin-left: 50rpx;
   background-color: black;
   height: 75rpx;
   width: 1rpx;
+}
+.without{
+  margin-bottom: 200rpx;
 }
